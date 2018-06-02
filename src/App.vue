@@ -116,6 +116,21 @@ details[open] summary:before {
 	display: block;
 }
 
+.result-item--infos {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.result-item--infos p {
+	display: block;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.result-item--infos p span {
+	font-weight: bold;
+}
+
 .paginate {
 	padding-top:1rem;
 	padding-bottom: 1rem;
