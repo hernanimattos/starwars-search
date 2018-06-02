@@ -5,7 +5,10 @@
 				<details>
 					<summary><h2> {{ result.name }}</h2></summary>
 					<div class="result-item--infos">
-						<p>Gender: {{result.gender}}</p>
+						<p><span>Gender:</span> {{result.gender}}</p>
+						<p><span>Eye Color:</span> {{result.eye_color}}</p>
+						<p><span>Height:</span> {{result.height}}</p>
+						<p><span>Hair color: </span>{{result.hair_color}}</p>
 					</div>
 				</details>
 			</li>
