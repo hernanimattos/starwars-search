@@ -57,9 +57,6 @@
 	font-size: 1rem;
 }
 
-.form-search input[type="text"] {
-	margin-right: 1rem;
-}
 
 .form-search input[type="submit"] {
 	background-color:#26716c;
