@@ -3,27 +3,6 @@
 		<search/>
 		<result/>
 		<paginate/>
-		<!-- <form @submit.prevent="searchTerms" class="form-search" :class="{'top':(resultSearchCount > 0)}">
-			<input type="text" name="" id="" placeholder="Ex: re2" v-model="search">
-			<input type="submit" value="Buscar">
-		</form>
-			<span>Total: {{this.resultSearchCount}}</span>
-		<section class="result" :style="[style]">
-			<ul>
-				<li class="result-item" v-for="(result, index) in resultSearch">
-					<details>
-						<summary><h2> {{ result.name }}</h2></summary>
-						<div class="result-item--infos">
-							<p>Gender: {{result.gender}}</p>
-						</div>
-					</details>
-				</li>
-			</ul>
-		</section>
-		<article>
-			<a @click.prevent="changePage(result.previous, 'page')" v-if="result.previous"> PREVIOUS</a>
-			<a @click.prevent="changePage(result.next, 'page')" v-if="result.next"> NEXT</a>
-		</article> -->
 	</main>
 </template>
 
