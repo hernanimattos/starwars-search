@@ -25,6 +25,10 @@ npm run serve
 
 Issues (https://github.com/hernanimattos/starwars-search/issues)
 
+## See example online (https://starwars-search.herokuapp.com/#/)
+
+
+
 
 
 
