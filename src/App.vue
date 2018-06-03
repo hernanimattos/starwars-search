@@ -55,15 +55,14 @@
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	font-size: 1rem;
+	-webkit-appearance: none;
 }
-
 
 .form-search input[type="submit"] {
 	background-color:#26716c;
 	color: #fff;
 	border: none;
 	text-transform: uppercase;
-	-webkit-appearance: none;
 }
 
 .form-search input[type="submit"]:hover {
