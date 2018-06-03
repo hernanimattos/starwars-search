@@ -23,9 +23,9 @@ export default {
   },
   methods: {
     searchTerms() {
-	  this.$root.$emit('search', this.search);
-	  this.$store.dispatch('SEARCH', this.search);
-	  this.search = '';
+	  this.$root.$emit('search', this.search.replace(/\s/g, '+'));
+      this.$store.dispatch('SEARCH', this.search.replace(/\s/g, '+'));
+      this.search = '';
     },
   },
 };
