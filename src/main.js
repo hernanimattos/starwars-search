@@ -6,6 +6,8 @@ import store from './store';
 
 import './assets/styles/reset.css';
 
+Vue.filter('formatHeight', value => value.replace(/([0-9]{2})$/g, ',$1'));
+
 Vue.config.productionTip = false;
 
 new Vue({
