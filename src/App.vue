@@ -91,7 +91,6 @@ summary:before {
 details[open] summary:before {
 	content: "-";
 	transition: all .2s ease;
-	background-color: #288a83
 }
 
 .result-item {
@@ -151,6 +150,7 @@ button {
 	background-color: #26716c;
 	color: #fff;
 	font-weight: bold;
+	-webkit-appearance: none;
 }
 
 button:hover {
