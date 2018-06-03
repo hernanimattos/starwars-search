@@ -1,6 +1,6 @@
 <template>
 	<section class="result">
-		<span v-if="this.$store.state.searchResult.results">No results to search term</span>
+		<span v-if="resultSearch && resultSearch.length == 0">No results to search term</span>
 		<ul>
 			<li class="result-item" v-for="(result, index) in resultSearch" :key="result[index]">
 				<details>
