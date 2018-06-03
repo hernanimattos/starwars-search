@@ -1,8 +1,8 @@
 <template>
 	<section class="result">
-		<span v-if="this.$store.state.searchResult.results.length == 0">No results to search term</span>
+		<span v-if="this.$store.state.searchResult.results">No results to search term</span>
 		<ul>
-			<li class="result-item" v-for="(result, index) in resultSearch">
+			<li class="result-item" v-for="(result, index) in resultSearch" :key="result[index]">
 				<details>
 					<summary><h2> {{ result.name }}</h2></summary>
 					<div class="result-item--infos">
