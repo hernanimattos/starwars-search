@@ -63,6 +63,7 @@
 	color: #fff;
 	border: none;
 	text-transform: uppercase;
+	-webkit-appearance: none;
 }
 
 .form-search input[type="submit"]:hover {
@@ -151,6 +152,7 @@ button {
 	color: #fff;
 	font-weight: bold;
 	-webkit-appearance: none;
+	border-radius: 0;
 }
 
 button:hover {
