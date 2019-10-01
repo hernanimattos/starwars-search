@@ -1,6 +1,5 @@
 <template>
   <main>
-    <p>Aquii</p>
     <search />
     <result />
     <paginate />
