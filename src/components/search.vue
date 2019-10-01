@@ -1,20 +1,25 @@
 <template>
-	<main>
-		<form @submit.prevent="searchTerms" class="form-search" :class="{'top':(resultSearchCount > 0)}">
-			<input type="text" name="" id="" placeholder="Ex: r2" v-model="search">
-			<input type="submit" value="Buscar">
-		</form>
-		<span class="result-total" v-if="this.resultSearchCount > 0">Total: {{this.resultSearchCount}}</span>
-	</main>
+  <main>
+    <form
+      @submit.prevent="searchTerms"
+      class="form-search"
+      :class="{'top':(resultSearchCount > 0)}"
+      id="search"
+    >
+      <input type="text" name id placeholder="Ex: r2" v-model="search" />
+      <input type="submit" value="Buscar" />
+    </form>
+    <span class="result-total" v-if="this.resultSearchCount > 0">Total: {{this.resultSearchCount}}</span>
+  </main>
 </template>
 
 <script>
 export default {
   name: 'Search',
   data() {
-	  return {
-		  search: '',
-	  };
+    return {
+      search: '',
+    };
   },
   computed: {
     resultSearchCount() {
@@ -23,7 +28,7 @@ export default {
   },
   methods: {
     searchTerms() {
-	  this.$root.$emit('search', this.search.replace(/\s/g, '+'));
+      this.$root.$emit('search', this.search.replace(/\s/g, '+'));
       this.$store.dispatch('SEARCH', this.search.replace(/\s/g, '+'));
       this.search = '';
     },

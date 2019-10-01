@@ -52,9 +52,6 @@ export default {
       this.$store.dispatch('CHANGE_PAGE', searchParam);
     },
   },
-  mounted() {
-    console.log(this.$gtm);
-  },
 };
 </script>
 
