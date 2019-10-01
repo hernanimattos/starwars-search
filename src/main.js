@@ -13,7 +13,7 @@ Vue.config.productionTip = false;
 Vue.use(VueTagManager, {
   gtmId: 'GTM-P2S3FSV',
 });
-Vue.gtm.push({ event: 'testeDeEvento' });
+// Vue.gtm.push({ event: 'testeDeEvento' });
 
 new Vue({
   store,
