@@ -7,16 +7,16 @@
 </template>
 
 <script>
-import search from "@/components/search.vue";
-import result from "@/components/result.vue";
-import paginate from "@/components/paginate.vue";
+import search from '@/components/search.vue';
+import result from '@/components/result.vue';
+import paginate from '@/components/paginate.vue';
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     search,
     result,
-    paginate
+    paginate,
   },
   computed: {
     resultSearchCount() {
@@ -27,17 +27,17 @@ export default {
     },
     result() {
       return this.$store.state.searchResult;
-    }
+    },
   },
   methods: {
     searchTerms() {
-      this.$store.dispatch("SEARCH", this.search);
-      this.search = "";
+      this.$store.dispatch('SEARCH', this.search);
+      this.search = '';
     },
     seachParamUrl(url, term) {
-      const query = url.split("?")[1].split("&");
+      const query = url.split('?')[1].split('&');
       const valueQuery = query.map(q => {
-        const queryArray = q.split("=");
+        const queryArray = q.split('=');
         if (queryArray.indexOf(term) === 0) {
           return queryArray[1] || [];
         }
@@ -47,11 +47,14 @@ export default {
     changePage(url, term) {
       const searchParam = {
         page: this.seachParamUrl(url, term),
-        term: this.search
+        term: this.search,
       };
-      this.$store.dispatch("CHANGE_PAGE", searchParam);
-    }
-  }
+      this.$store.dispatch('CHANGE_PAGE', searchParam);
+    },
+  },
+  mounted() {
+    console.log(this.$gtm);
+  },
 };
 </script>
 
