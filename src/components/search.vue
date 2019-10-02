@@ -14,6 +14,10 @@
 </template>
 
 <script>
+var mixpanel = require('mixpanel-browser');
+mixpanel.init('45a7d4fbb212809648303d8e177fc118');
+
+console.log(mixpanel);
 export default {
   name: 'Search',
   data() {
@@ -29,14 +33,13 @@ export default {
   methods: {
     searchTerms() {
       this.trackingFormSubmit();
-      console.log('jjjj');
       this.$root.$emit('search', this.search.replace(/\s/g, '+'));
       this.$store.dispatch('SEARCH', this.search.replace(/\s/g, '+'));
       this.search = '';
     },
     trackingFormSubmit() {
       console.log('form enviado');
-      window.mixpanel.track_forms('#search', 'send form', {
+      mixpanel.track_forms('#search', 'sendForm', {
         referrer: document.referrer,
       });
     },
