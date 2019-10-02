@@ -6,6 +6,7 @@ import store from './store';
 
 import './assets/styles/reset.css';
 
+Vue.prototype.$mixpanel = window.mixpanel;
 Vue.filter('formatHeight', value => value.replace(/([0-9]{2})$/g, ',$1'));
 
 Vue.config.productionTip = false;
@@ -14,7 +15,7 @@ Vue.use(VueTagManager, {
   gtmId: 'GTM-P2S3FSV',
 });
 
-Vue.gtm.push({ event: 'testeDeEvento' });
+// console.log(window.mixpanel, 'ffff');
 
 new Vue({
   store,

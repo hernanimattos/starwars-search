@@ -28,9 +28,17 @@ export default {
   },
   methods: {
     searchTerms() {
+      this.trackingFormSubmit();
+      console.log('jjjj');
       this.$root.$emit('search', this.search.replace(/\s/g, '+'));
       this.$store.dispatch('SEARCH', this.search.replace(/\s/g, '+'));
       this.search = '';
+    },
+    trackingFormSubmit() {
+      console.log('form enviado');
+      window.mixpanel.track_forms('#search', 'send form', {
+        referrer: document.referrer,
+      });
     },
   },
 };
